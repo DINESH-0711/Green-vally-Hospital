@@ -1,0 +1,16 @@
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  background: url("../assests/back\ 2.png") no-repeat center center/cover;
+}
+
+.login-left {
+  flex: 1;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

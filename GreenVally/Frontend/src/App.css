@@ -1,0 +1,176 @@
+/* App.css */
+
+/* General container */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.hospital-container {
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+.hospital-navbar {
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.hospital-navbar-brand {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.hospital-menu-toggle {
+  display: none;
+}
+
+.hospital-menu-icon {
+  font-size: 28px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.hospital-navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.hospital-navbar-links li {
+  position: relative;
+}
+
+.hospital-navbar-links li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 14.5px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.hospital-navbar-links li a:hover,
+.hospital-navbar-links li.active a {
+  border-radius: 4px;
+}
+
+.hospital-dropdown {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.hospital-nav-item:hover > .hospital-dropdown {
+  display: block;
+}
+
+.hospital-dropdown li {
+  color: white;
+  text-decoration: none;
+  padding: 5px 7px;
+  display: block;
+  font-size: 14.5px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #1e293b;
+}
+
+.hospital-has-submenu:hover > .hospital-submenu {
+  display: block;
+}
+
+.hospital-submenu {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+
+  z-index: 1000;
+  border-radius: 40px;
+  min-width: 160px;
+}
+
+.hospital-submenu li {
+  font-size: 14.5px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.hospital-navbar-links li a:hover {
+  background-color: #edf2f7;
+  color: #2b6cb0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hospital-menu-icon {
+    display: block;
+  }
+
+  .hospital-navbar-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #006769;
+  }
+
+  .hospital-menu-toggle:checked + .hospital-menu-icon + .hospital-navbar-links {
+    display: flex;
+  }
+
+  .hospital-navbar-links li {
+    width: 100%;
+  }
+
+  .hospital-navbar-links li a {
+    padding: 10px;
+  }
+
+  .hospital-dropdown,
+  .hospital-submenu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .hospital-dropdown li,
+  .hospital-submenu li {
+    color: white;
+  }
+
+  .hospital-dropdown li:hover,
+  .hospital-submenu li:hover {
+    background-color: #37996a;
+  }
+}
